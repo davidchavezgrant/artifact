@@ -41,17 +41,8 @@ struct ChatPage: View {
                     .cornerRadius(20)
                     .padding(.horizontal)
                 
-                Button(action: sendMessage) {
-                    Text("Send")
-                        .foregroundColor(.white)
-                        .padding(.horizontal)
-                        .padding(.vertical, 10)
-                        .background(Color.blue)
-                        .cornerRadius(20)
-                }
-                .padding(.trailing)
+               SendButton(onClick: sendMessage)
             }
-            .padding(.bottom)
             .background(Color(UIColor.systemGray6))
         }
         .navigationBarTitle("Messages")
