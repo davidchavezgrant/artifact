@@ -3,6 +3,7 @@ import SwiftUI
 struct ArtifactList: View {
     @Binding var artifacts: [Any]
     @Binding var selectedArtifact: Int?
+    
     var body: some View {
         ScrollView {
             Spacer()

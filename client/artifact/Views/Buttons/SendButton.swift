@@ -2,6 +2,7 @@ import SwiftUI
 
 struct SendButton: View {
     var onClick: () -> Void
+    
     var body: some View {
         Button(action: onClick) {
             Text("Send")

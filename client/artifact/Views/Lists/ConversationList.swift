@@ -4,6 +4,7 @@ import URLImage
 struct ConversationList: View {
     @Binding var chats: [String]
     @Binding var searchText: String
+    
     var body: some View {
         List(chats.filter({ searchText.isEmpty ? true : $0.localizedCaseInsensitiveContains(searchText) }), id: \.self) { chat in
             NavigationLink(destination: ChatPage()) {

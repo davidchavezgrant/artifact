@@ -1,7 +1,10 @@
 import SwiftUI
 
 struct ChatPage: View {
+    /// The message text input
     @State private var messageText = ""
+    
+    /// The collection of messages
     @State private var messages: [Message] = [
         Message(text: "Hello!", isAttachment: false),
         Message(text: "How are you?", isAttachment: false),
@@ -16,6 +19,14 @@ struct ChatPage: View {
         Message(text: "Isn't she cute?", isAttachment: false),
         Message(text: "Isn't she cute?", isAttachment: false),
     ]
+    
+    /// Sends a message by appending the current input to the collection and clearing the input.
+    func sendMessage() {
+        if !messageText.isEmpty {
+            messages.append(Message(text: messageText, isAttachment: false))
+            messageText = ""
+        }
+    }
     
     var body: some View {
         VStack {
@@ -46,12 +57,5 @@ struct ChatPage: View {
             .background(Color(UIColor.systemGray6))
         }
         .navigationBarTitle("Messages")
-    }
-    
-    func sendMessage() {
-        if !messageText.isEmpty {
-            messages.append(Message(text: messageText, isAttachment: false))
-            messageText = ""
-        }
     }
 }
