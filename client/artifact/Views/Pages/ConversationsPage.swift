@@ -16,9 +16,9 @@ struct ConversationsPage: View {
                 
                 SearchBar(text: $searchText)
                     .padding(.horizontal)
-
+                
                 ConversationList(chats: $chats, searchText: $searchText)
-                .listStyle(PlainListStyle())
+                    .listStyle(PlainListStyle())
             }
             .navigationTitle("")
             .navigationBarHidden(true)

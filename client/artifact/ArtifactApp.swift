@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct artifactApp: App {
     let persistenceController = PersistenceController.shared
-
+    
     var body: some Scene {
         WindowGroup {
             HomePage(messageText: "")

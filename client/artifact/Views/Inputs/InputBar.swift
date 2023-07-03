@@ -27,8 +27,8 @@ struct InputBar: View {
                 .cornerRadius(20)
                 .padding(.horizontal)
             
-        SendButton(onClick: sendMessage)
-            .padding(.trailing)
+            SendButton(onClick: sendMessage)
+                .padding(.trailing)
         }
         .padding(.top)
         .background(Color(UIColor.systemGray6))

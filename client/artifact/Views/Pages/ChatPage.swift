@@ -21,7 +21,7 @@ struct ChatPage: View {
         VStack {
             ScrollView {
                 VStack(spacing: 10) {
-                 ForEach(messages) { message in
+                    ForEach(messages) { message in
                         if message.isAttachment {
                             AttachmentBubble()
                         } else {
@@ -41,7 +41,7 @@ struct ChatPage: View {
                     .cornerRadius(20)
                     .padding(.horizontal)
                 
-               SendButton(onClick: sendMessage)
+                SendButton(onClick: sendMessage)
             }
             .background(Color(UIColor.systemGray6))
         }
